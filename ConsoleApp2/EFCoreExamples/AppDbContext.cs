@@ -37,5 +37,6 @@ namespace ConsoleApp2.EFCoreExamples
 
         [Column("BlogContent")]
         public string Content { get; set; }
+
     }
 }

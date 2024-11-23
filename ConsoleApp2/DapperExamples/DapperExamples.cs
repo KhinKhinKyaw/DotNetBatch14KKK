@@ -19,6 +19,7 @@ namespace ConsoleApp2.DapperExamples
         {
             using IDbConnection connection = new SqlConnection(_connectionString);
 
+
             List<BlogDto> lst = connection
                  .Query<BlogDto>("select * from tbl_blog")
                  .ToList();

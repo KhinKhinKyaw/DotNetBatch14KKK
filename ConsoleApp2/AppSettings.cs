@@ -16,6 +16,7 @@ namespace ConsoleApp2
             UserID = "sa",
             Password = "sa@123",
             TrustServerCertificate = true
+
         };
     }
 }

@@ -21,6 +21,7 @@ namespace ConsoleApp2.EFCoreExamples
                 Console.WriteLine(item.Title);
                 Console.WriteLine(item.Author);
                 Console.WriteLine(item.Content);
+
             }
         }
 

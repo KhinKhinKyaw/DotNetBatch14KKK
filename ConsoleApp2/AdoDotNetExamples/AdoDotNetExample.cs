@@ -100,6 +100,7 @@ namespace ConsoleApp2.AdoDotNetExamples
             adapter.Fill(dt);
             connection.Close();
 
+
         }
 
         public void Delete(string id)
