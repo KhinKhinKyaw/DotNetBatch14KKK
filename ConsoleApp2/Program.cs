@@ -2,7 +2,7 @@
 using ConsoleApp2.AdoDotNetExamples;
 using ConsoleApp2.DapperExamples;
 using ConsoleApp2.EFCoreExamples;
-using Microsoft.Data.SqlClient;
+//using Microsoft.Data.SqlClient;
 
 
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
@@ -18,4 +18,8 @@ DapperExamples dapperExamples = new DapperExamples();
 //dapperExamples.Update("2", "HarryPotter");
 //dapperExamples.Delete("2");
 EFCoreExample eFCoreExample = new EFCoreExample();
-eFCoreExample.Read();
+//eFCoreExample.Read();
+eFCoreExample.Edit("722736d8-f31c-49c1-8416-0dede3c1e770");
+//eFCoreExample.Create("sc", "sc1", "sc2");
+
+//eFCoreExample.Update("1", "Harry", "Potter", "HP");
