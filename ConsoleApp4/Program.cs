@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using ConsoleApp4.AdoDotNetExamples2;
-using ConsoleApp4.DapperExamples2;
-using ConsoleApp4.EFCoreExamples2;
+using DotNetBatch14KKKConsoleApp4.AdoDotNetExamples2;
+using DotNetBatch14KKKConsoleApp4.DapperExamples2;
+using DotNetBatch14KKKConsoleApp4.EFCoreExamples2;
 using Microsoft.Data.SqlClient;
 
 AdoDotNetExamples2 adoDotNetExample = new AdoDotNetExamples2();
@@ -17,8 +17,8 @@ DapperExamples2 dapperExamples = new DapperExamples2();
 //dapperExamples.Update("2", "HarryPotter");
 //dapperExamples.Delete("2");
 EFCoreExamples2 eFCoreExample = new EFCoreExamples2();
-//eFCoreExample.Read();
+eFCoreExample.Read();
 eFCoreExample.Edit("722736d8-f31c-49c1-8416-0dede3c1e770");
-//eFCoreExample.Create("sc", "sc1", "sc2");
+eFCoreExample.Create("sc", "sc1", "sc2");
 
-//eFCoreExample.Update("1", "Harry", "Potter", "HP");
+eFCoreExample.Update("722736d8-f31c-49c1-8416-0dede3c1e770", "Harry", "Potter", "HP");

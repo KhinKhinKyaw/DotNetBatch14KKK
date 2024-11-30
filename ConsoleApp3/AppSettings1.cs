@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
-namespace ConsoleApp3
+namespace DotNetBatch14KKKConsoleApp3
 {
     public class AppSettings1
     {

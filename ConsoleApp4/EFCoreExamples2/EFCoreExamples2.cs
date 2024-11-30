@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleApp4.EFCoreExamples2
+namespace DotNetBatch14KKKConsoleApp4.EFCoreExamples2
 {
-    public  class EFCoreExamples2
+    public class EFCoreExamples2
     {
         private readonly AppDbContext2 _db = new AppDbContext2();
         public void Read()

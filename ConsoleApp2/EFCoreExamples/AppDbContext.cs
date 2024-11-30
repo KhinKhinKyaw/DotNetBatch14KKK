@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace ConsoleApp2.EFCoreExamples
+namespace DotNetBatch14KKKConsoleApp2.EFCoreExamples
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,5 +1,5 @@
-﻿using ConsoleApp2.Dtos;
-using Dapper;
+﻿using Dapper;
+using DotNetBatch14KKKConsoleApp2.Dtos;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2.DapperExamples
+namespace DotNetBatch14KKKConsoleApp2.DapperExamples
 {
-   
+
     public class DapperExamples
     {
         private readonly string _connectionString = AppSettings.SqlConnectionStringBuilder.ConnectionString;
@@ -72,9 +72,9 @@ namespace ConsoleApp2.DapperExamples
             Console.WriteLine(message);
         }
 
-        public void Update(string id,string title)
+        public void Update(string id, string title)
         {
-            using IDbConnection connection=new SqlConnection(_connectionString);
+            using IDbConnection connection = new SqlConnection(_connectionString);
             var item = connection
                 .Query<BlogDto>($"Update tbl_blog set BlogTitle='{title}' where BlogId='{id}'")
                 .FirstOrDefault();
@@ -83,7 +83,7 @@ namespace ConsoleApp2.DapperExamples
 
         public void Delete(string id)
         {
-            using IDbConnection connection=new SqlConnection(_connectionString);    
+            using IDbConnection connection = new SqlConnection(_connectionString);
             var item = connection
                 .Query<BlogDto>($"DELETE FROM tbl_blog WHERE BlogId='{id}'")
                 .FirstOrDefault();

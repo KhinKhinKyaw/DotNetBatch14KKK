@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using ConsoleApp2.AdoDotNetExamples;
-using ConsoleApp2.DapperExamples;
-using ConsoleApp2.EFCoreExamples;
+using DotNetBatch14KKKConsoleApp2.AdoDotNetExamples;
+using DotNetBatch14KKKConsoleApp2.DapperExamples;
+using DotNetBatch14KKKConsoleApp2.EFCoreExamples;
 //using Microsoft.Data.SqlClient;
 
 

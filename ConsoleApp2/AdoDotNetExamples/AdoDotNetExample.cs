@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
-namespace ConsoleApp2.AdoDotNetExamples
+namespace DotNetBatch14KKKConsoleApp2.AdoDotNetExamples
 {
     public class AdoDotNetExample
     {
@@ -89,13 +89,13 @@ namespace ConsoleApp2.AdoDotNetExamples
             Console.WriteLine(message);
         }
 
-        public void update(string id,string title)
+        public void update(string id, string title)
         {
             string query = $@"UPDATE Tbl_Blog SET BlogTitle='{title}' WHERE  BlogId = '{id}'";
-            SqlConnection connection =new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter( cmd);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             connection.Close();
@@ -106,13 +106,13 @@ namespace ConsoleApp2.AdoDotNetExamples
         public void Delete(string id)
         {
             string query = $@"DELETE FROM Tbl_Blog where BlogId = '{id}' ";
-            SqlConnection connection=new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
             SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataAdapter adapter = new SqlDataAdapter( cmd);
-            DataTable dt = new DataTable(); 
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
             adapter.Fill(dt);
-            connection.Close(); 
+            connection.Close();
 
         }
 

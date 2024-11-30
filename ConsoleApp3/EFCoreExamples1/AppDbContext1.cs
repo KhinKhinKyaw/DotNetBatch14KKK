@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleApp3.EFCoreExamples1
+namespace DotNetBatch14KKKConsoleApp3.EFCoreExamples1
 {
     public class AppDbContext1 : DbContext
 
@@ -24,7 +24,7 @@ namespace ConsoleApp3.EFCoreExamples1
 
     }
     [Table("Tbl_Blog")]
-    
+
     public class TblBlog
     {
         [Key]

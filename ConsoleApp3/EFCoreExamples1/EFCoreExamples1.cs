@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleApp3.EFCoreExamples1
+namespace DotNetBatch14KKKConsoleApp3.EFCoreExamples1
 {
     public class EFCoreExamples1
     {
-        private readonly AppDbContext1 _db=new AppDbContext1();
+        private readonly AppDbContext1 _db = new AppDbContext1();
         public void Read()
         {
             var lst = _db.Blogs.ToList();
@@ -36,19 +36,19 @@ namespace ConsoleApp3.EFCoreExamples1
             Console.WriteLine(item.Content);
         }
 
-        public void Create(string title,string author,string content)
+        public void Create(string title, string author, string content)
         {
             var blog = new TblBlog
             {
-                Id= Guid.NewGuid().ToString(),
+                Id = Guid.NewGuid().ToString(),
                 Title = title,
                 Author = author,
                 Content = content
 
             };
             _db.Blogs.Add(blog);
-            var result= _db.SaveChanges();
-            string message= result> 0 ? "Saving Successful." : "Saving Failed.";
+            var result = _db.SaveChanges();
+            string message = result > 0 ? "Saving Successful." : "Saving Failed.";
             Console.WriteLine(message);
         }
 

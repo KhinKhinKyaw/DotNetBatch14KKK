@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
-namespace ConsoleApp2.EFCoreExamples
+namespace DotNetBatch14KKKConsoleApp2.EFCoreExamples
 {
     public class EFCoreExample
     {
@@ -50,7 +50,7 @@ namespace ConsoleApp2.EFCoreExamples
                 Author = author,
                 Content = content
             };
-           
+
             _db.Blogs.Add(blog);
             var result = _db.SaveChanges();
 
@@ -252,6 +252,6 @@ namespace ConsoleApp2.EFCoreExamples
         public string Description { get; set; }
         public decimal Discount { get; set; }
         public string ProductCategory { get; set; }
-    
-}
+
+    }
 }

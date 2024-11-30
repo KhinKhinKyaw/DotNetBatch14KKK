@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
-namespace ConsoleApp4.AdoDotNetExamples2
+namespace DotNetBatch14KKKConsoleApp4.AdoDotNetExamples2
 {
     public class AdoDotNetExamples2
     {

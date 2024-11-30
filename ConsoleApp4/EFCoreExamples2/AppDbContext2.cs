@@ -7,15 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace ConsoleApp4.EFCoreExamples2
+namespace DotNetBatch14KKKConsoleApp4.EFCoreExamples2
 {
-    public class AppDbContext2:DbContext
+    public class AppDbContext2 : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(AppSettings.SqlConnectionStringBuilder.ConnectionString);
+
             }
         }
 

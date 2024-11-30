@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using ConsoleApp4.Dtos2;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -8,10 +7,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using DotNetBatch14KKKConsoleApp4.Dtos2;
 
-namespace ConsoleApp4.DapperExamples2
+namespace DotNetBatch14KKKConsoleApp4.DapperExamples2
 {
-    public  class DapperExamples2
+    public class DapperExamples2
     {
         private readonly string _connectionString = AppSettings.SqlConnectionStringBuilder.ConnectionString;
         public void Read()
