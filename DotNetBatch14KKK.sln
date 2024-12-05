@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKKConsoleApp3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKKConsoleApp4", "ConsoleApp4\DotNetBatch14KKKConsoleApp4.csproj", "{2D9BC311-F35C-494A-B685-22A589536200}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKK.RestApi", "DotNetBatch14KKK.RestApi\DotNetBatch14KKK.RestApi.csproj", "{ABAD9CD0-46F5-419B-B8EC-E45925D40460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKK.RestApi1", "DotNetBatch14KKK.RestApi1\DotNetBatch14KKK.RestApi1.csproj", "{8995DC4C-17C2-4EDF-8459-DACF921D0AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{2D9BC311-F35C-494A-B685-22A589536200}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D9BC311-F35C-494A-B685-22A589536200}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D9BC311-F35C-494A-B685-22A589536200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABAD9CD0-46F5-419B-B8EC-E45925D40460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABAD9CD0-46F5-419B-B8EC-E45925D40460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABAD9CD0-46F5-419B-B8EC-E45925D40460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABAD9CD0-46F5-419B-B8EC-E45925D40460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8995DC4C-17C2-4EDF-8459-DACF921D0AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8995DC4C-17C2-4EDF-8459-DACF921D0AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8995DC4C-17C2-4EDF-8459-DACF921D0AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8995DC4C-17C2-4EDF-8459-DACF921D0AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
