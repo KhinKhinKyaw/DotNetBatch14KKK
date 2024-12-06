@@ -1,15 +1,14 @@
 ﻿using System.Data;
 using Dapper;
-using DotNetBatch14KKK.RestApi.Features.Blog;
+using DotNetBatch14KKK.RestApi2.Feature2.AdoDotNetExamples2;
 using Microsoft.Data.SqlClient;
 
-namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
+namespace DotNetBatch14KKK.RestApi2.Feature2.AdoDotNetExamples2
 {
-    public class BlogDapperServices : IBlogServices
+    public class BlogDapperService2 : IBlogService2
     {
-
         private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
-        public BlogDapperServices()
+        public BlogDapperService2()
         {
             _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
             {
@@ -20,25 +19,25 @@ namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
                 TrustServerCertificate = true
             };
         }
-        public List<BlogModel> GetBlogs()
+        public List<BlogModel2> GetBlogs()
         {
             string query = "select * from tbl_blog with (nolock)";
             using IDbConnection db = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
-            var lst = db.Query<BlogModel>(query).ToList();
+            var lst = db.Query<BlogModel2>(query).ToList();
             return lst;
         }
 
-        public BlogModel GetBlog(string id)
+        public BlogModel2 GetBlog(string id)
         {
             string query = "select * from tbl_blog with (nolock)";
             using IDbConnection db = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
-            var item = db.QueryFirstOrDefault<BlogModel>(query);
+            var item = db.QueryFirstOrDefault<BlogModel2>(query);
             return item!;
         }
 
-        public BlogResponseModel CreateBlog(BlogModel requestModel)
+        public BlogResponse Create(BlogModel2 requestModel)
         {
             string query = $@"INSERT INTO [dbo].[Tbl_Blog]
                              ([BlogTitle]
@@ -53,19 +52,19 @@ namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
             var result = db.Execute(query, requestModel);
 
             string message = result > 0 ? "Saving Successful." : "Saving Failed.";
-            BlogResponseModel model = new BlogResponseModel();
+            BlogResponse model = new BlogResponse();
             model.IsSuccess = result > 0;
             model.Message = message;
 
             return model;
         }
 
-        public BlogResponseModel UpdateBlog(BlogModel requestModel)
+        public BlogResponse Update(BlogModel2 requestModel)
         {
             var item = GetBlog(requestModel.BlogId!);
             if (item is null)
             {
-                return new BlogResponseModel
+                return new BlogResponse
                 {
                     IsSuccess = false,
                     Message = "No data found."
@@ -95,16 +94,16 @@ namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
             var result = db.Execute(query, requestModel);
 
             string message = result > 0 ? "Saving Successful." : "Saving Failed.";
-            BlogResponseModel model = new BlogResponseModel();
+            BlogResponse model = new BlogResponse();
             model.IsSuccess = result > 0;
             model.Message = message;
 
             return model;
         }
 
-        public BlogResponseModel UpInsertBlog(BlogModel requestModel)
+        public BlogResponse UpInsert(BlogModel2 requestModel)
         {
-            BlogResponseModel model = new BlogResponseModel();
+            BlogResponse model = new BlogResponse();
 
             var item = GetBlog(requestModel.BlogId!);
             if (item is not null)
@@ -129,24 +128,24 @@ namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
             }
             else if (item is null)
             {
-                model = CreateBlog(requestModel);
+                model = Create(requestModel);
             }
 
             return model;
         }
 
-        public BlogResponseModel DeleteBlog(string id)
+        public BlogResponse Delete(string id)
         {
             string query = "Delete from [dbo].[Tbl_Blog] where BlogId = @BlogId";
 
             using IDbConnection db = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
-            var result = db.Execute(query, new BlogModel
+            var result = db.Execute(query, new BlogModel2
             {
                 BlogId = id
             });
 
             string message = result > 0 ? "Delete Success." : "Delete Fail!";
-            BlogResponseModel model = new BlogResponseModel();
+            BlogResponse model = new BlogResponse();
             model.IsSuccess = result > 0;
             model.Message = message;
 
@@ -154,3 +153,4 @@ namespace DotNetBatch14KKK.RestApi.Features.BlogDapper
         }
     }
 }
+

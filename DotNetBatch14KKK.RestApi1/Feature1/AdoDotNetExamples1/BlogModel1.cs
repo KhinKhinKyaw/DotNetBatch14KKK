@@ -10,7 +10,8 @@
     }
 
     public class BlogResponse1
-    { public bool? IsSuccess { get; set; }
+    {
+        public bool IsSuccess { get; set; }
         public string Message { get; set; }
     }
 }
