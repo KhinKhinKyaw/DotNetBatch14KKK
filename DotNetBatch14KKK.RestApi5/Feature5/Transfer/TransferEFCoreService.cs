@@ -102,6 +102,23 @@ namespace DotNetBatch14KKK.RestApi5.Feature5.Transfer
             var lst = db.Transactions.AsNoTracking().Where(x => x.ToMobileNo == MobileNo || x.FromMobileNo == MobileNo).ToList();
             return lst;
         }
+
+        public TransferResponseModel PatchBalance(string MobileNo, decimal increasedAmount)
+        {
+            UserModel userData = GetUserData(MobileNo);
+            TransferResponseModel model = new TransferResponseModel();
+
+            userData.Balance += increasedAmount;
+
+            db.Users.Entry(userData).State = EntityState.Modified;
+            int result = db.SaveChanges();
+
+            string message = result > 0 ? "Update success" : "Update fail";
+            model.IsSuccess = result > 0;
+            model.Message = message;
+
+            return model;
+        }
     }
 }
 

@@ -48,5 +48,17 @@ namespace DotNetBatch14KKK.RestApi5.Feature5.Transfer
             }
             return Ok(model);
         }
+
+        [HttpPatch]
+        public IActionResult PatchBalance(string mobileNo, decimal increasedAmount)
+        {
+            var model = transferService.PatchBalance(mobileNo, increasedAmount);
+
+            if (!model.IsSuccess)
+            {
+                BadRequest(model);
+            }
+            return Ok(model);
+        }
     }
 }

@@ -7,5 +7,7 @@ namespace DotNetBatch14KKK.RestApi5.Feature5.Transfer
         TransferResponseModel CreateUser(UserModel user);
         List<TransactionModel> GetTransaction(string MobileNo);
         UserModel GetUserData(string MobileNo);
+
+        TransferResponseModel PatchBalance(string MobileNo, decimal increasedAmount);
     }
 }
