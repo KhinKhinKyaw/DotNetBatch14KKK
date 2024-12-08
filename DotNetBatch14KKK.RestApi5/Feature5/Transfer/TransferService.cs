@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace DotNetBatch14KKK.RestApi5.Feature5.Transfer
 {
-    public class TransferService : ITransferService
+    public class TransferService : ITransferService1
     {
         public readonly SqlConnectionStringBuilder sqlConnectionStringBuilder;
         public TransferService()

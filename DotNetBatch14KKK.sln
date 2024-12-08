@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKK.RestApi4",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKK.RestApi5", "DotNetBatch14KKK.RestApi5\DotNetBatch14KKK.RestApi5.csproj", "{D9CE07AB-56BC-4C2A-8F5D-5A5B65D6C223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBatch14KKK.MiniKpay", "DotNetBatch14KKK.MiniKpay\DotNetBatch14KKK.MiniKpay.csproj", "{8B0F67C1-C3A3-42C6-9D57-AD51FAFBD1ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{D9CE07AB-56BC-4C2A-8F5D-5A5B65D6C223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9CE07AB-56BC-4C2A-8F5D-5A5B65D6C223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9CE07AB-56BC-4C2A-8F5D-5A5B65D6C223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0F67C1-C3A3-42C6-9D57-AD51FAFBD1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0F67C1-C3A3-42C6-9D57-AD51FAFBD1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0F67C1-C3A3-42C6-9D57-AD51FAFBD1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0F67C1-C3A3-42C6-9D57-AD51FAFBD1ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
